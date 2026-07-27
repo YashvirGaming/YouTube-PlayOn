@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "NeverPause - Auto Continue",
+  "version": "1.0",
+  "description": "Automatically dismisses the 'Video paused. Continue watching?' popup so your streams never stop.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
