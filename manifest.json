@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "NeverPause - Auto Continue",
+  "name": "YouTube PlayOn",
   "version": "1.0",
   "description": "Automatically dismisses the 'Video paused. Continue watching?' popup so your streams never stop.",
   "content_scripts": [
