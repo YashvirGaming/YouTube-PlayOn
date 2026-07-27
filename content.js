@@ -1,25 +1,43 @@
-const selectors = [
-  'yt-confirm-dialog-renderer #confirm-button',
-  'tp-yt-paper-dialog #confirm-button',
-  'yt-button-renderer[dialog-action="confirm"]',
-  '.yt-core-button--primary[aria-label="Yes"]'
-];
+(function () {
+  'use strict';
 
-function autoClickContinue() {
-  for (let selector of selectors) {
-    const confirmButton = document.querySelector(selector);
-    if (confirmButton && confirmButton.offsetParent !== null) {
-      confirmButton.click();
-      console.log('[YouTube PlayOn] Automatically clicked "Continue watching".');
-      return;
-    }
+  function isEnabled(callback) {
+    chrome.storage.local.get({ enabled: true }, (result) => {
+      callback(result.enabled);
+    });
   }
-}
 
-const observer = new MutationObserver(autoClickContinue);
-observer.observe(document.body, {
-  childList: true,
-  subtree: true
-});
+  function incrementDismissCount() {
+    chrome.storage.local.get({ dismissCount: 0 }, (result) => {
+      const updated = result.dismissCount + 1;
+      chrome.storage.local.set({ dismissCount: updated });
+    });
+  }
 
-setInterval(autoClickContinue, 3000);
+  function checkAndDismiss() {
+    isEnabled((enabled) => {
+      if (!enabled) return;
+
+      const confirmButtons = document.querySelectorAll(
+        'yt-confirm-dialog-renderer #confirm-button, #confirm-button.yt-confirm-dialog-renderer'
+      );
+
+      confirmButtons.forEach((btn) => {
+        if (btn && btn.offsetParent !== null) {
+          btn.click();
+          console.log('[YouTube PlayOn] By Yashvir Gaming.');
+          incrementDismissCount();
+        }
+      });
+    });
+  }
+
+  // DOM MutationObserver for instant detection
+  const observer = new MutationObserver(() => {
+    checkAndDismiss();
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  setInterval(checkAndDismiss, 2000);
+})();
