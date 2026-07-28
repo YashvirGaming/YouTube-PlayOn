@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Automatically pull version from manifest.json
+  const versionBadge = document.getElementById("versionBadge");
+  if (versionBadge) {
+    versionBadge.textContent = `v${chrome.runtime.getManifest().version}`;
+  }
+
   const toggleSwitch = document.getElementById("toggleSwitch");
   const statusIndicator = document.getElementById("statusIndicator");
   const statusText = document.getElementById("statusText");

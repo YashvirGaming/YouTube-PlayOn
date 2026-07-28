@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube PlayOn",
-  "version": "1.0.0",
+  "version": "1.1",
   "description": "Automatically dismisses YouTube idle prompts to keep your videos and playlists running uninterrupted.",
   "permissions": ["storage"],
   "host_permissions": ["*://*.youtube.com/*"],
