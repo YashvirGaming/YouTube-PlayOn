@@ -16,6 +16,14 @@
 
 ---
 
+# 🆕 **What's New in v1.1**
+
+- 🛠️ **Fixed DOM Detection:** Updated selector logic to immediately catch and auto-dismiss all variations of YouTube's idle prompts.
+- 📊 **Counter Reliability:** Fixed an issue where the lifetime "Prompts Dismissed" counter was not incrementing.
+- 🔄 **Dynamic Version Badge:** Popup UI now automatically syncs its displayed version number directly from the manifest.
+
+---
+
 # ✨ **Why Choose YouTube PlayOn?**
 
 Whether you're listening to a **10-hour lo-fi playlist**, watching a **long documentary**, following a **livestream**, or simply letting videos play in the background, **YouTube PlayOn** ensures your viewing experience stays uninterrupted.
