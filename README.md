@@ -6,14 +6,9 @@
 
 <p><b>YouTube PlayOn</b> is a <b>fast</b>, <b>lightweight</b>, and <b>privacy-focused</b> Chrome extension that automatically clicks the <b>"Continue watching?"</b> popup—so your videos, music, livestreams, and playlists keep playing without interruption.</p>
 
-<p>
-  <img width="323" alt="Extension Logo" src="<img width="336" height="594" alt="Screenshot 2026-09-29 181017" src="https://github.com/user-attachments/assets/3bf80b52-cd75-4cb7-b951-a29d86097b64" />
-" />
-</p>
+<img width="336" height="594" alt="Screenshot 2026-09-29 181017" src="https://github.com/user-attachments/assets/bb932a85-bcb2-4405-baa4-7614a53882ba" />
 
 ---
-
-<img width="336" height="594" alt="Screenshot 2026-09-29 181017" src="https://github.com/user-attachments/assets/bb932a85-bcb2-4405-baa4-7614a53882ba" />
 
 <img width="1586" height="868" alt="627444211-3b5381ba-13f4-41f4-ae1c-ebec7104a98e" src="https://github.com/user-attachments/assets/301bff06-cb05-4213-b7fe-40eeac355635" />
  
