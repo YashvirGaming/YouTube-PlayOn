@@ -14,18 +14,38 @@
     });
   }
 
+  function isVisible(el) {
+    return !!el && el.offsetParent !== null;
+  }
+
+  function findClickTarget(dialog) {
+    const confirmHost = dialog.querySelector('#confirm-button');
+    if (confirmHost) {
+      const innerBtn = confirmHost.querySelector('button');
+      if (isVisible(innerBtn)) return innerBtn;
+      if (isVisible(confirmHost)) return confirmHost;
+    }
+    const ariaYes = dialog.querySelector('button[aria-label="Yes"]');
+    if (isVisible(ariaYes)) return ariaYes;
+    return null;
+  }
+
   function checkAndDismiss() {
     isEnabled((enabled) => {
       if (!enabled) return;
 
-      const confirmButtons = document.querySelectorAll(
-        'yt-confirm-dialog-renderer #confirm-button, #confirm-button.yt-confirm-dialog-renderer'
-      );
+      const dialogs = document.querySelectorAll('yt-confirm-dialog-renderer, tp-yt-paper-dialog');
 
-      confirmButtons.forEach((btn) => {
-        if (btn && btn.offsetParent !== null) {
-          btn.click();
-          console.log('[YouTube PlayOn] By Yashvir Gaming.');
+      dialogs.forEach((dialog) => {
+        if (!isVisible(dialog)) return;
+
+        const text = dialog.textContent || '';
+        if (!text.includes('Continue watching')) return;
+
+        const target = findClickTarget(dialog);
+        if (target) {
+          target.click();
+          console.log('[YouTube PlayOn] Prompt dismissed. By Yashvir Gaming.');
           incrementDismissCount();
         }
       });
@@ -37,7 +57,8 @@
     checkAndDismiss();
   });
 
-  observer.observe(document.body, { childList: true, subtree: true });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
 
-  setInterval(checkAndDismiss, 2000);
+  checkAndDismiss();
+  setInterval(checkAndDismiss, 1500);
 })();
