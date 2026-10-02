@@ -7,15 +7,16 @@
 <p><b>YouTube PlayOn</b> is a <b>fast</b>, <b>lightweight</b>, and <b>privacy-focused</b> Chrome extension that automatically clicks the <b>"Continue watching?"</b> popup—so your videos, music, livestreams, and playlists keep playing without interruption.</p>
 
 <p>
-  <img width="323" alt="Extension Logo" src="https://github.com/user-attachments/assets/7ab58f09-3011-4167-a54c-4dfcabafc7be" />
+  <img width="323" alt="Extension Logo" src="<img width="336" height="594" alt="Screenshot 2026-09-29 181017" src="https://github.com/user-attachments/assets/3bf80b52-cd75-4cb7-b951-a29d86097b64" />
+" />
 </p>
 
-<p>
-  <img width="900" alt="YouTube PlayOn Banner" src="https://github.com/user-attachments/assets/3b5381ba-13f4-41f4-ae1c-ebec7104a98e" />
-</p>
+---
 
-</div>
+<img width="336" height="594" alt="Screenshot 2026-09-29 181017" src="https://github.com/user-attachments/assets/bb932a85-bcb2-4405-baa4-7614a53882ba" />
 
+<img width="1586" height="868" alt="627444211-3b5381ba-13f4-41f4-ae1c-ebec7104a98e" src="https://github.com/user-attachments/assets/301bff06-cb05-4213-b7fe-40eeac355635" />
+ 
 ---
 
 ## 🆕 **What's New in v1.1**
@@ -23,6 +24,8 @@
 - 🛠️ **Fixed DOM Detection:** Updated selector logic to immediately catch and auto-dismiss all variations of YouTube's idle prompts.
 - 📊 **Counter Reliability:** Fixed an issue where the lifetime "Prompts Dismissed" counter was not incrementing.
 - 🔄 **Dynamic Version Badge:** Popup UI now automatically syncs its displayed version number directly from the manifest.
+
+<img width="1102" height="605" alt="Screenshot 2026-09-29 181025" src="https://github.com/user-attachments/assets/51b65f9b-7d31-46e4-95f3-ddf8648c243b" />
 
 ---
 
