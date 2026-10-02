@@ -14,11 +14,13 @@
  
 ---
 
-## 🆕 **What's New in v1.1**
+## 🆕 **What's New in v1.3**
 
-- 🛠️ **Fixed DOM Detection:** Updated selector logic to immediately catch and auto-dismiss all variations of YouTube's idle prompts.
-- 📊 **Counter Reliability:** Fixed an issue where the lifetime "Prompts Dismissed" counter was not incrementing.
-- 🔄 **Dynamic Version Badge:** Popup UI now automatically syncs its displayed version number directly from the manifest.
+- 🤖 **Background Automation & Tab Independence:** Added advanced native mouse event simulation (`pointerdown`, `mousedown`, `pointerup`, `mouseup`, `click`) to successfully bypass restrictions and dismiss prompts even when YouTube runs in a hidden or background tab.
+- ⏱️ **Built-in Cooldown Protection:** Introduced a 5-second debounce cooldown to prevent redundant event spamming and guarantee clean, accurate counter increments.
+- ⚡ **Optimized Performance:** Refined MutationObserver scope and ticker intervals to drastically reduce CPU overhead during multi-hour background sessions.
+- 📊 **Counter Reliability:** Fixed an issue where the lifetime "Prompts Dismissed" counter was not incrementing (carried over from v1.1).
+- 🔄 **Dynamic Version Badge:** Popup UI automatically syncs its displayed version number directly from the manifest.
 
 <img width="1102" height="605" alt="Screenshot 2026-09-29 181025" src="https://github.com/user-attachments/assets/51b65f9b-7d31-46e4-95f3-ddf8648c243b" />
 
